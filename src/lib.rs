@@ -7,6 +7,17 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
+//! Look up the script for a character.
+//!
+//! ### Example
+//!
+//! ```
+//! use unicode_script::{get_script, Script};
+//!
+//! assert_eq!(get_script('A'), Script::Latin);
+//! assert_eq!(get_script('カ'), Script::Katakana);
+//! ```
+
 pub mod script;
 pub mod tables;
 pub use script::get_script;
