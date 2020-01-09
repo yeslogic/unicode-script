@@ -10,6 +10,7 @@ yeslogic-unicode-script
   <a href="https://crates.io/crates/yeslogic-unicode-script">
     <img src="https://img.shields.io/crates/v/yeslogic-unicode-script.svg" alt="Version">
   </a>
+  <img src="https://img.shields.io/badge/unicode-12.1-informational" alt="Unicode Version">
 </div>
 
 <br>
