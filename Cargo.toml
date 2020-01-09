@@ -1,12 +1,24 @@
 [package]
-name = "unicode-script"
+name = "yeslogic-unicode-script"
 version = "0.3.0"
-authors = ["The Servo Project Developers"]
+authors = [
+  "The Servo Project Developers",
+  "YesLogic Pty. Ltd. <info@yeslogic.com>"
+]
+
+homepage = "https://github.com/yeslogic/unicode-script"
+repository = "https://github.com/yeslogic/unicode-script"
+documentation = "https://docs.rs/crate/yeslogic-unicode-script"
+
+readme = "README.md"
 license = "MIT / Apache-2.0"
-description = "Look up the Unicode Script property"
-repository = "https://github.com/servo/unicode-script"
-documentation = "http://doc.servo.org/unicode_script/"
+
+description = "Fast lookup of the Unicode Script property"
 keywords = ["unicode", "text", "i18n", "script"]
+categories = ["text-processing"]
+
+[lib]
+name = "unicode_script"
 
 [features]
 harfbuzz = ["harfbuzz-sys"]
