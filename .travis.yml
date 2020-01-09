@@ -17,3 +17,4 @@ before_script:
 script:
   - cargo fmt -- --check
   - cargo test
+  - cargo test --features harfbuzz
