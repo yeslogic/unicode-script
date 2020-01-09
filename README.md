@@ -1,11 +1,60 @@
-# unicode-script
+yeslogic-unicode-script
+=======================
 
-Look up the [Unicode Script Property][tr24] for any Unicode codepoint.
+<div align="center">
+  <a href="https://travis-ci.com/yeslogic/unicode-script">
+    <img src="https://travis-ci.com/yeslogic/unicode-script.svg?branch=master" alt="Build Status"></a>
+  <a href="https://docs.rs/yeslogic-unicode-script">
+    <img src="https://docs.rs/yeslogic-unicode-script/badge.svg" alt="Documentation">
+  </a>
+  <a href="https://crates.io/crates/yeslogic-unicode-script">
+    <img src="https://img.shields.io/crates/v/yeslogic-unicode-script.svg" alt="Version">
+  </a>
+</div>
 
-[Documentation](https://doc.servo.org/unicode_script/)
+<br>
 
-[![Build Status](https://travis-ci.org/servo/unicode-script.svg?branch=master)](https://travis-ci.org/servo/unicode-script)
+Fast lookup of the Unicode Script property for `char` in Rust using
+Unicode 12.1 data.
 
-[![crates.io](http://meritbadge.herokuapp.com/unicode-script)](https://crates.io/crates/unicode-script)
+Usage
+-----
 
-[tr24]: https://www.unicode.org/reports/tr24/
+`Cargo.toml`:
+
+```toml
+[dependencies]
+yeslogic-unicode-script = "0.3.0"
+```
+
+`main.rs`:
+
+```rust
+use unicode_script::{get_script, Script};
+
+fn main() {
+    assert_eq!(get_script('A'), Script::Latin);
+    assert_eq!(get_script('カ'), Script::Katakana);
+}
+```
+
+Performance & Implementation Notes
+----------------------------------
+
+[ucd-generate] is used to generate `tables.rs`. A build script (`build.rs`)
+compiles this into a two level look up table. The look up time is constant as
+it is just indexing into two arrays.
+
+The two level approach maps a code point to a block, then to a position within
+a block. The allows the second level of block to be deduplicated, saving space.
+The code is parameterised over the block size, which must be a power of 2. The
+value in the build script is optimal for the data set.
+
+This approach trades off some space for faster lookups. The tables take up
+about 43KiB. Benchmarks showed this approach to be ~5–10× faster than the
+typical binary search approach.
+
+It's possible there are further optimisations that could be made to eliminate
+some runs of repeated values in the first level array.
+
+[ucd-generate]: https://github.com/yeslogic/ucd-generate
