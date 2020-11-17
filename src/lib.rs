@@ -25,7 +25,7 @@ pub use tables::Script;
 
 /// The version of [Unicode](http://www.unicode.org/)
 /// that this version of unicode-script is based on.
-pub const UNICODE_VERSION: (u64, u64, u64) = (12, 1, 0);
+pub const UNICODE_VERSION: (u64, u64, u64) = (13, 0, 0);
 
 #[cfg(feature = "harfbuzz")]
 extern crate harfbuzz_sys;
@@ -59,6 +59,7 @@ impl Script {
             Chakma => HB_SCRIPT_CHAKMA,
             Cham => HB_SCRIPT_CHAM,
             Cherokee => HB_SCRIPT_CHEROKEE,
+            Chorasmian => HB_SCRIPT_CHORASMIAN,
             Common => HB_SCRIPT_COMMON,
             Coptic => HB_SCRIPT_COPTIC,
             Cuneiform => HB_SCRIPT_CUNEIFORM,
@@ -66,6 +67,7 @@ impl Script {
             Cyrillic => HB_SCRIPT_CYRILLIC,
             Deseret => HB_SCRIPT_DESERET,
             Devanagari => HB_SCRIPT_DEVANAGARI,
+            DivesAkuru => HB_SCRIPT_DIVES_AKURU,
             Dogra => HB_SCRIPT_DOGRA,
             Duployan => HB_SCRIPT_DUPLOYAN,
             EgyptianHieroglyphs => HB_SCRIPT_EGYPTIAN_HIEROGLYPHS,
@@ -97,6 +99,7 @@ impl Script {
             Katakana => HB_SCRIPT_KATAKANA,
             KayahLi => HB_SCRIPT_KAYAH_LI,
             Kharoshthi => HB_SCRIPT_KHAROSHTHI,
+            KhitanSmallScript => HB_SCRIPT_KHITAN_SMALL_SCRIPT,
             Khmer => HB_SCRIPT_KHMER,
             Khojki => HB_SCRIPT_KHOJKI,
             Khudawadi => HB_SCRIPT_KHUDAWADI,
@@ -187,6 +190,7 @@ impl Script {
             Vai => HB_SCRIPT_VAI,
             Wancho => HB_SCRIPT_WANCHO,
             WarangCiti => HB_SCRIPT_WARANG_CITI,
+            Yezidi => HB_SCRIPT_YEZIDI,
             Yi => HB_SCRIPT_YI,
             ZanabazarSquare => HB_SCRIPT_ZANABAZAR_SQUARE,
         }
