@@ -25,7 +25,7 @@ pub use tables::Script;
 
 /// The version of [Unicode](http://www.unicode.org/)
 /// that this version of unicode-script is based on.
-pub const UNICODE_VERSION: (u64, u64, u64) = (13, 0, 0);
+pub const UNICODE_VERSION: (u64, u64, u64) = (14, 0, 0);
 
 #[cfg(feature = "harfbuzz")]
 extern crate harfbuzz_sys;
