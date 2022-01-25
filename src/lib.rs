@@ -25,7 +25,7 @@ pub use tables::Script;
 
 /// The version of [Unicode](http://www.unicode.org/)
 /// that this version of unicode-script is based on.
-pub const UNICODE_VERSION: (u64, u64, u64) = (13, 0, 0);
+pub const UNICODE_VERSION: (u64, u64, u64) = (14, 0, 0);
 
 #[cfg(feature = "harfbuzz")]
 extern crate harfbuzz_sys;
@@ -193,6 +193,16 @@ impl Script {
             Yezidi => HB_SCRIPT_YEZIDI,
             Yi => HB_SCRIPT_YI,
             ZanabazarSquare => HB_SCRIPT_ZANABAZAR_SQUARE,
+
+            // Added in Harfbuzz 3.0.0 but harfbuzz_sys has not been updated to that version
+            // CyproMinoan => HB_SCRIPT_CYPRO_MINOAN,
+            // OldUyghur => HB_SCRIPT_OLD_UYGHUR,
+            // Tangsa => HB_SCRIPT_TANGSA,
+            // Toto => HB_SCRIPT_TOTO,
+            // Vithkuqi => HB_SCRIPT_VITHKUQI,
+
+            // So for now we return HB_SCRIPT_INVALID
+            CyproMinoan | OldUyghur | Tangsa | Toto | Vithkuqi => HB_SCRIPT_INVALID,
         }
     }
 }

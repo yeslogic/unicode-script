@@ -7,7 +7,7 @@ yeslogic-unicode-script
   <a href="https://docs.rs/yeslogic-unicode-script">
     <img src="https://docs.rs/yeslogic-unicode-script/badge.svg" alt="Documentation">
   </a>
-  <img src="https://img.shields.io/badge/unicode-13.0-informational" alt="Unicode Version">
+  <img src="https://img.shields.io/badge/unicode-14.0-informational" alt="Unicode Version">
   <a href="https://crates.io/crates/yeslogic-unicode-script">
     <img src="https://img.shields.io/crates/v/yeslogic-unicode-script.svg" alt="Version">
   </a>
@@ -16,7 +16,7 @@ yeslogic-unicode-script
 <br>
 
 Fast lookup of the Unicode Script property for `char` in Rust using
-Unicode 13.0 data.
+Unicode 14.0 data.
 
 Usage
 -----
