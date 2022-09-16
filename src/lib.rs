@@ -25,7 +25,7 @@ pub use tables::Script;
 
 /// The version of [Unicode](http://www.unicode.org/)
 /// that this version of unicode-script is based on.
-pub const UNICODE_VERSION: (u64, u64, u64) = (14, 0, 0);
+pub const UNICODE_VERSION: (u64, u64, u64) = (15, 0, 0);
 
 #[cfg(feature = "harfbuzz")]
 extern crate harfbuzz_sys;
@@ -201,8 +201,14 @@ impl Script {
             // Toto => HB_SCRIPT_TOTO,
             // Vithkuqi => HB_SCRIPT_VITHKUQI,
 
+            // Added in Unicode 15.0
+            // Kawi => HB_SCRIPT_KAWI
+            // NagMundari => HB_SCRIPT_NAG_MUNDARI
+
             // So for now we return HB_SCRIPT_INVALID
-            CyproMinoan | OldUyghur | Tangsa | Toto | Vithkuqi => HB_SCRIPT_INVALID,
+            CyproMinoan | Kawi | NagMundari | OldUyghur | Tangsa | Toto | Vithkuqi => {
+                HB_SCRIPT_INVALID
+            }
         }
     }
 }
