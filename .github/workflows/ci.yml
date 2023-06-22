@@ -12,7 +12,7 @@ jobs:
   ci:
     strategy:
       matrix:
-        rust: [beta, stable, 1.38.0]
+        rust: [beta, stable, 1.57.0]
         os: [ubuntu-latest]
         experimental: [false]
         include:
