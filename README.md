@@ -2,8 +2,8 @@ yeslogic-unicode-script
 =======================
 
 <div align="center">
-  <a href="https://travis-ci.com/yeslogic/unicode-script">
-    <img src="https://travis-ci.com/yeslogic/unicode-script.svg?branch=master" alt="Build Status"></a>
+  <a href="https://github.com/yeslogic/unicode-script/actions/workflows/ci.yml">
+    <img src="https://github.com/yeslogic/unicode-script/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
   <a href="https://docs.rs/yeslogic-unicode-script">
     <img src="https://docs.rs/yeslogic-unicode-script/badge.svg" alt="Documentation">
   </a>
