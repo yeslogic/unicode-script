@@ -25,7 +25,7 @@ pub use tables::Script;
 
 /// The version of [Unicode](http://www.unicode.org/)
 /// that this version of unicode-script is based on.
-pub const UNICODE_VERSION: (u64, u64, u64) = (15, 0, 0);
+pub const UNICODE_VERSION: (u64, u64, u64) = (16, 0, 0);
 
 #[cfg(feature = "harfbuzz")]
 extern crate harfbuzz_sys;
@@ -205,8 +205,17 @@ impl Script {
             // Kawi => HB_SCRIPT_KAWI
             // NagMundari => HB_SCRIPT_NAG_MUNDARI
 
+            // Added in Unicode 16.0
+            // Garay =>HB_SCRIPT_GARAY,
+            // GurungKhema => HB_SCRIPT_GURUNG_KHEMA,
+            // KiratRai => HB_SCRIPT_KIRAT_RAI,
+            // OlOnal => HB_SCIRPT_OLONAL,
+            // Sunuwar => HB_SCRIPT_SUNUWAR,
+            // Todhri | TuluTigalari
+
             // So for now we return HB_SCRIPT_INVALID
-            CyproMinoan | Kawi | NagMundari | OldUyghur | Tangsa | Toto | Vithkuqi => {
+            CyproMinoan | Kawi | NagMundari | OldUyghur | Tangsa | Toto | Vithkuqi | Garay
+            | GurungKhema | KiratRai | OlOnal | Sunuwar | Todhri | TuluTigalari => {
                 HB_SCRIPT_INVALID
             }
         }
