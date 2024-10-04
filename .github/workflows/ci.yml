@@ -29,4 +29,3 @@ jobs:
           components: rustfmt
       - run: cargo fmt -- --check
       - run: cargo test
-      - run: cargo test --features harfbuzz

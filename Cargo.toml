@@ -20,10 +20,3 @@ categories = ["text-processing"]
 
 [lib]
 name = "unicode_script"
-
-[features]
-harfbuzz = ["harfbuzz-sys"]
-
-[dependencies.harfbuzz-sys]
-version = "0.6.1"
-optional = true
