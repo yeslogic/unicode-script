@@ -1,6 +1,6 @@
 [package]
 name = "yeslogic-unicode-script"
-version = "0.7.0"
+version = "1.0.0-pre"
 authors = [
   "The Servo Project Developers",
   "YesLogic Pty. Ltd. <info@yeslogic.com>"
