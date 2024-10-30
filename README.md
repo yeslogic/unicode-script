@@ -5,12 +5,10 @@ yeslogic-unicode-script
   <a href="https://github.com/yeslogic/unicode-script/actions/workflows/ci.yml">
     <img src="https://github.com/yeslogic/unicode-script/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
   <a href="https://docs.rs/yeslogic-unicode-script">
-    <img src="https://docs.rs/yeslogic-unicode-script/badge.svg" alt="Documentation">
-  </a>
+    <img src="https://docs.rs/yeslogic-unicode-script/badge.svg" alt="Documentation"></a>
   <img src="https://img.shields.io/badge/unicode-16.0-informational" alt="Unicode Version">
   <a href="https://crates.io/crates/yeslogic-unicode-script">
-    <img src="https://img.shields.io/crates/v/yeslogic-unicode-script.svg" alt="Version">
-  </a>
+    <img src="https://img.shields.io/crates/v/yeslogic-unicode-script.svg" alt="Version"></a>
 </div>
 
 <br>
